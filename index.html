@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You Will Always Be Important To Me</title>
+  <style type="text/css">
+      *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: Roboto;
+        overflow: hidden;
+      }
+
+      header{
+        position: relative;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(255 255 255 / 0.5);
+        z-index: 9;
+      }
+      .logo{
+        float: left;
+      }
+      .menu ul li{
+        display: inline-block;
+        float: left;
+      }
+      .menu ul li a{
+        position: relative;
+        display: inline-block;
+        float: left;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 30px 30px;
+        letter-spacing: 1.6px;
+        border-right: 1px solid rgb(255 255 255 / 0.5);
+        overflow: hidden;
+        transition: all ease 0.5s;
+      }
+      .menu ul li:last-child a{
+        border-right: 0px;
+      }
+      .content .btn-primary:after,
+      .menu ul li a:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        background-color: gainsboro;
+        transition: all ease 0.5s;
+      }
+      .content .btn-primary:hover,
+      .menu ul li a:hover{
+        background-color: #fff;
+        color: #000;
+      }
+      .content .btn-primary:hover:after,
+      .menu ul li a:hover:after{
+        top: -100%;
+      }
+      .toggle{
+        float: right;
+        width: 30px;
+        height: 30px;
+        transition: all ease 0.5s;
+      }
+      .toggle:hover{
+        transform: rotate(180deg);
+      }
+      .content{
+        padding: 50px 50px;
+        color: #fff;
+        max-width: 900px;
+      }
+      .content h1{
+        font-size: 104px;
+        font-weight: 1150;
+        text-transform: arial;
+        line-height: 70px;
+        letter-spacing: 10px;
+      }
+      .content p{
+        line-height: 26px;
+        font-weight: 60;
+        padding: 8px 0 14px;
+      }
+      .content .btn-primary{
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        border: 1px solid #fff;
+        padding: 20px 40px;
+        border-radius: 50px;
+        margin-right: 15px;
+        transition: all ease 0.5s;
+      }
+      .play-btn img{
+        position: absolute;
+      }
+      .pause-img{
+        display: none;
+      }
+
+      .bg-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+      .bg-video video{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <div class="logo">
+      <img src="C:\Users\kmeri_u81reux\Pictures\a\My project (1).png" alt="">
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="https://alexrm-01.github.io/Apps/" target="_blank">Apps</a></li>
+        <li><a href="https://syrus.es/como-compartir-tu-posicion-en-tiempo-real-con-google-maps-y-con-un-dispositivo-android-2588.html#:~:text=1.-,Abre,-la%20aplicaci%C3%B3n%20de"" target="_blank">Otro...</a></li>
+        <li><a href="https://www.gob.mx/inmujeres/articulos/servicios-de-atencion-a-mujeres-en-situacion-de-violencia-de-los-estados?idiom=es/#:~:text=salud.gob.mx-,Te,-invitamos%20a%20conocer" target="_blank">Numero de emergencia</a></li>
+      </ul>
+    </div>
+    <div class="toggle">
+      <img src="" alt="">
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>Stay Safe</h1>
+    <p><br>*Esta pag. La hice para una persona en específico, si llegará a ver esto usted Srta.Andrea<br> espero tambien le pueda servir, la pag solo se ve bien en pc xD *.<br><br>
+    No sé que tan enterada estás del tema, pero últimamente la tasa de secuestros y feminicidios <br>en nuestro país han aumentado considerablemente. Es por eso que arriba te puse algunas<br> aplicaciones que pueden ayudarte por te sientes en peligro (Espero nunca llegues a necesitarlas). <br><br>De igual forma puse otros métodos por si no quieres descargarlas.<br> Tal vez pienses que es algo estupido , pero más vale prevenir ¿No?.
+    <br>Eres importante para mí... Bueno no solo para mí.
+    <br>Por favor mantente a salvo. </p>
+    <div>
+      <a href="https://alexrm-01.github.io/My_Contact/" class="btn-primary"  target="_blank">Ingresa Aquí</a>
+      <a href="javascript:void(0)" class="play-btn">
+        <img class="play-img" src="img\play.png" alt="">
+        <img class="pause-img"src="img\pause.png" alt="">
+      </a>
+    </div>
+  </div>
+
+<div class="bg-video">
+  <video id="bg-video" autoplay loop="5" poster="img\imagen1.png">
+    <source src="source\video.mp4" type="">
+  </video>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+     $(document).ready(function(){
+       $(".play-btn .play-img").on('click', function(){
+         $(".play-btn .play-img").fadeOut();
+         $(".play-btn .pause-img").fadeIn();
+         $("#bg-video")[0].play();
+       });
+
+       $(".play-btn .pause-img").on('click', function(){
+         $(".play-btn .play-img").fadeIn();
+         $(".play-btn .pause-img").fadeOut();
+         $("#bg-video")[0].pause();
+       });
+       $("#bg-video")[0].onplay = function(){
+         $(".play-btn .play-img").fadeOut();
+         $(".play-btn .pause-img").fadeIn();
+       };
+     });
+
+</script>
+</body>
+</html>
